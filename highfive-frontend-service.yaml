@@ -23,7 +23,7 @@ spec:
       containers:
       - name: highfive-frontend-service
         
-        image: 326536620954.dkr.ecr.ap-northeast-2.amazonaws.com/highfive/highfive-frontend:
+        image: 326536620954.dkr.ecr.ap-northeast-2.amazonaws.com/highfive/highfive-frontend:0.0.8
         
         imagePullPolicy: IfNotPresent
         ports:
