@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: highfive-alert-service
+  name: highfive-alert-service
+  namespace: hf-alert
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: highfive-alert-service
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: highfive-alert-service
+    spec:
+      containers:
+      - name: highfive-alert-service
+        
+        # ▼▼▼ 이 서비스의 CI/CD 파이프라인이 이 라인의 버전을 업데이트합니다 ▼▼▼
+        image: 326536620954.dkr.ecr.ap-northeast-2.amazonaws.com/highfive/highfive-alert:0.2.2
+        
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8005
+          protocol: TCP
+          
+        envFrom:
+        - configMapRef:
+            name: highfive-alert-service-config
+        - secretRef:
+            name: highfive-alert-service-secrets
+            
+        resources: {}
+        
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30
