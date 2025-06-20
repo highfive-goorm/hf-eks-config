@@ -24,7 +24,7 @@ spec:
       - name: highfive-order-service
         
         # ▼▼▼ 이 서비스의 CI/CD 파이프라인이 이 라인의 버전을 업데이트합니다 ▼▼▼
-        image: 326536620954.dkr.ecr.ap-northeast-2.amazonaws.com/highfive/highfive-order:0.0.1
+        image: 326536620954.dkr.ecr.ap-northeast-2.amazonaws.com/highfive/highfive-order:1.0.0
         
         imagePullPolicy: IfNotPresent
         ports:
