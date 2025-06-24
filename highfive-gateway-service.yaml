@@ -23,7 +23,7 @@ spec:
       containers:
       - name: highfive-gateway-service
         
-        image: 326536620954.dkr.ecr.ap-northeast-2.amazonaws.com/highfive/highfive-gateway:1.0.0
+        image: 326536620954.dkr.ecr.ap-northeast-2.amazonaws.com/highfive/highfive-gateway:1.1.0
         
         imagePullPolicy: IfNotPresent
         ports:
