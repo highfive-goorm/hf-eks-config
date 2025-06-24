@@ -24,7 +24,7 @@ spec:
       - name: highfive-promotion-service
         
         # ▼▼▼ 서비스 이름(promotion)을 반영하고, 초기 버전을 0.1.0으로 설정했습니다 ▼▼▼
-        image: 326536620954.dkr.ecr.ap-northeast-2.amazonaws.com/highfive/highfive-promotion:1.0.0
+        image: 326536620954.dkr.ecr.ap-northeast-2.amazonaws.com/highfive/highfive-promotion:1.0.1
         
         imagePullPolicy: IfNotPresent
         ports:
