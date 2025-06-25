@@ -6,7 +6,7 @@ metadata:
   name: highfive-frontend-service
   namespace: hf-frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: highfive-frontend-service
